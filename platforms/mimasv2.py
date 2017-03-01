@@ -84,10 +84,10 @@ _io = [
         Subsignal("segment2", Pins("D6"), IOStandard("LVCMOS33")),  # F
         Subsignal("segment1", Pins("C6"), IOStandard("LVCMOS33")),  # G
         Subsignal("segment0", Pins("A5"), IOStandard("LVCMOS33")),  # Dot
-        Subsignal("enable0", Pins("B2"), IOStandard("LVCMOS33")),   # EN0
+        Subsignal("enable0", Pins("B3"), IOStandard("LVCMOS33")),   # EN0
         Subsignal("enable1", Pins("A2"), IOStandard("LVCMOS33")),   # EN1
-        Subsignal("enable2", Pins("B3"), IOStandard("LVCMOS33"))),  # EN2
-
+        Subsignal("enable2", Pins("B2"), IOStandard("LVCMOS33")),   # EN2
+    ),
 
     ("audio", 0,
         Subsignal("channel1", Pins("B16"), IOStandard("LVCMOS33"),

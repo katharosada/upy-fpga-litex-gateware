@@ -14,6 +14,7 @@ from litedram.core import ControllerSettings
 
 from gateware import info
 from gateware import cas
+from gateware import sevenseg
 
 from targets.utils import csr_map_update
 
@@ -222,7 +223,7 @@ class BaseSoC(SoCSDRAM):
             self.ddrphy.clk4x_wr_strb.eq(self.crg.clk4x_wr_strb),
             self.ddrphy.clk4x_rd_strb.eq(self.crg.clk4x_rd_strb),
         ]
-
         self.submodules.cas = cas.ControlAndStatus(platform, clk_freq)
+        self.submodules.sevenseg = sevenseg.SevenSegments(platform, clk_freq)
 
 SoC = BaseSoC
